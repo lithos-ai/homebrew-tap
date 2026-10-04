@@ -1,0 +1,27 @@
+name: Homebrew install
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  install:
+    runs-on: macos-26
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_ANALYTICS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and test the exact tap revision
+        run: |
+          tap="$(brew --repository)/Library/Taps/lithos-ai/homebrew-tap"
+          mkdir -p "$tap"
+          cp -R Formula "$tap/Formula"
+          if brew command trust >/dev/null 2>&1; then brew trust lithos-ai/tap; fi
+          brew readall lithos-ai/tap
+          brew install lithos-ai/tap/lithos-metal
+          brew test lithos-ai/tap/lithos-metal
+          lithos-metal --version
+          lithos-metal models
+          lithos-metal serve --help

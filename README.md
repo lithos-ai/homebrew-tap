@@ -1,6 +1,6 @@
 # lithos-metal Homebrew tap
 
-Install [lithos-metal](https://github.com/jiazhihao/mpk-apple), local LLM inference on Apple silicon:
+Install [lithos-metal](https://github.com/lithos-ai/lithos-metal), local LLM inference on Apple silicon:
 
 ```bash
 brew install lithos-ai/tap/lithos-metal
@@ -18,7 +18,7 @@ lithos-metal codex
 lithos-metal hermes
 ```
 
-The validated large-model setup is a 40-core M5 Max with 48 GB memory. See the [serving guide](https://github.com/jiazhihao/mpk-apple/blob/codex/lithos-metal-cli/docs/serving.md) for supported chips, options, and current API/model limitations.
+The validated large-model setup is a 40-core M5 Max with 48 GB memory. See the [serving guide](https://github.com/lithos-ai/lithos-metal/blob/main/docs/serving.md) for supported chips, options, and current API/model limitations.
 
 ## Updating
 

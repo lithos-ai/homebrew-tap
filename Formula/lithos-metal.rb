@@ -1,9 +1,9 @@
 class LithosMetal < Formula
   desc "lithos-metal: local LLM inference on Apple silicon"
-  homepage "https://github.com/jiazhihao/mpk-apple"
-  url "https://github.com/jiazhihao/mpk-apple/releases/download/v0.1.1/lithos-metal-0.1.1-macos-arm64.tar.gz"
-  version "0.1.1"
-  sha256 "72e8cc3f575731d5912afa1add12377642c00fd0208b883c79b47620da9368fa"
+  homepage "https://github.com/lithos-ai/lithos-metal"
+  url "https://github.com/lithos-ai/lithos-metal/releases/download/v0.1.2/lithos-metal-0.1.2-macos-arm64.tar.gz"
+  version "0.1.2"
+  sha256 "a51b821923b21ed4134979779f0ed77c98cbc9b227fed7627ec620704169a3e3"
   license "Apache-2.0"
 
   depends_on arch: :arm64
